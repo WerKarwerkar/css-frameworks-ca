@@ -1,3 +1,4 @@
+/* Configuration */
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/maps";
@@ -7,5 +8,8 @@
 @import "variables-dark";
 
 
+/* Bootstrap main file */
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+/* My custom */
