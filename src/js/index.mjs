@@ -1,7 +1,6 @@
 import { setRegisterFormListener } from "./handlers/register.mjs";
-import { setLoginFormListener } from "./handlers/login.mjs.mjs";
+import { setLoginFormListener } from "./handlers/login.mjs";
 
-import * as posts from "./api//posts/index.mjs";
 
 const path = location.pathname;
 
@@ -11,4 +10,3 @@ if (path === '/profile/login/') {
    setRegisterFormListener()
 }
 
-posts.createPost()

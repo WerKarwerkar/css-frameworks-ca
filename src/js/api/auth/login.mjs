@@ -16,13 +16,10 @@ export async function login(profile) {
         body
     })
 
-    const {accessToken, ...user} = await response.json()
+    const result = await response.json()
 
-    storage.save("token", accessToken)
+    localStorage.setItem("token", result.accessToken);
 
-    storage.save("profile", user)
-
-    alert("You are now logged in")
 
 }
 
