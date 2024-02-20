@@ -1,6 +1,6 @@
 import { API_SOCIAL_URL } from "../constants.mjs";
 
-const action = "/auth/register";
+const action = "/auth/register/index.html";
 const method = "post";
 
 export async function register(profile) {
@@ -14,7 +14,7 @@ export async function register(profile) {
         method,
         body
     })
-
+    console.log(response)
     const result = await response.json()
     return result
 }

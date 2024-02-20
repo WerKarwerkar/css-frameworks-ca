@@ -5,7 +5,7 @@ export function setLoginFormListener() {
     const form = document.querySelector("#loginForm");
 
     if (form) {
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("login", (event) => {
         event.preventDefault()
         const form = event.target;
         const formData = new FormData(form);
