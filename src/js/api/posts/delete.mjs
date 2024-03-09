@@ -2,6 +2,9 @@ import { API_SOCIAL_URL } from "../constants.mjs";
 
 import { authFetch } from "../authFetch.mjs";
 
+import { getPost } from "./read.mjs";
+
+
 const action = "/posts";
 const method = "delete";
 

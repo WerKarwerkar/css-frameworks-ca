@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/dist/css/theme.css" />
     <script src="/src/js/index.mjs" defer type="module"></script>
 
-    <title>Tech-community create post page</title>
+    <title>Tech-community post delete page</title>
     <meta name="description" content="Stay updated with the latest tech news, discussions, and trends on the Tech-community Feed. Explore diverse topics, connect with fellow tech enthusiasts, and contribute to the dynamic tech ecosystem. Join the conversation and immerse yourself in the world of technology.">
 </head>
 <body class="bg-primary">
@@ -20,24 +20,24 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-6 align-items-center">
-                    <form  id="createPost">
-                        <div class="form-group mb-3">
+                    <form  id="deletePost">
+                        <div class="form-group mb-3 mt-3">
                             <label for="" class="form-label">Title</label>
-                            <input type="text" name="title" class="form-control" required>
+                            <input type="text" name="title" class="form-control" disabled>
                           </div>
                           <div class="form-group mb-3">
                             <label for="" class="form-label">Body</label>
-                            <textarea class="form-control" name="body" required></textarea>
+                            <textarea class="form-control" name="body" disabled></textarea>
                           </div>
-                          <div class="form-group mb-3">
+                          <!-- <div class="form-group mb-3">
                             <label for="" class="form-label">Tags</label>
                             <input type="text" name="tags" class="form-control">
-                          </div> 
+                          </div> -->
                           <div class="form-group mb-3">
                             <label for="name" class="form-label">Media</label>
-                            <input type="url" name="media" class="form-control">
+                            <input type="url" name="media" class="form-control" disabled >
                           </div>
-                        <button class="btn btn-primary mt-3 btn btn-outline-secondary" type="submit">Post</button>
+                        <button class="btn btn-primary mt-3" type="submit">Delete Post</button>
                      </form>
                 </div>
 
@@ -61,4 +61,4 @@
         </div>
     </footer>
 </body>
-</html> -->
+</html>
