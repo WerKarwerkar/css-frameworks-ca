@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       listeners.setLoginFormListener();
    } else if (path === '/profile/register/index.html') {
       listeners.setRegisterFormListener();
-   } else if (path === '/post/create/index.html') {
+   } else if (path === '/posts/index.html') {
       listeners.setCreatePostFormListener();
    } else if (path === '/post/edit/index.html') {
       console.log('setting listener')
@@ -47,3 +47,5 @@ document.addEventListener("DOMContentLoaded", async () => {
       listeners.setRemovePostListener();
    }
 });
+
+

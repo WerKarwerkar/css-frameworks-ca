@@ -56,8 +56,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     try {
         const post = await postMethods.getPost(postId);
         renderPostDetails(post);
+
+        const updatePostBtn = document.getElementById('updatePostBtn');
+        updatePostBtn.addEventListener('click', () => {
+            window.location.href = `/post/edit/index.html?id=${postId}`;
+        });
+        
     } catch (error) {
-        console.error("Error whille fetching the post", error);
+        console.error("Error while fetching the post", error);
     }
 });
 
@@ -70,4 +76,19 @@ function renderPostDetails(post) {
             <p class="text-light text-end fw-bold">🤍 259 💬 49 </p>
             ${post.media ? `<img src="${post.media}" alt="Image from ${post.title}" class="img-fluid mb-3 rounded">` : ''}
         </div>
-    `}
+        <div class="text-center">
+        <button id="updatePostBtn" class="btn btn-primary mx-2 mt-3">Update post</button>
+        <button id="removePostBtn" class="btn btn-primary mx-2 mt-3">Delete post</button>
+        </div>
+    `;
+
+    const updatePostBtn = document.getElementById('updatePostBtn');
+    updatePostBtn.addEventListener('click', () => {
+        window.location.href = `/post/edit/index.html?id=${post.id}`;
+    });
+
+    const removePostBtn = document.getElementById('removePostBtn');
+    removePostBtn.addEventListener('click', () => {
+    window.location.href = `/post/delete/index.html?id=${post.id}`;
+    });
+}

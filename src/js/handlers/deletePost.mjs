@@ -23,6 +23,10 @@ export async function setRemovePostListener() {
                 try {
                     await removePost(id);
                     console.log('Post removed successfully');
+
+                    alert('Post deleted successfully'); 
+
+                    window.location.href = `/posts/index.html`; 
                 } catch (error) {
                     console.error('Error removing post:', error);
                 }

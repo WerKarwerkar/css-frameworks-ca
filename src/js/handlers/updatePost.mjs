@@ -24,6 +24,8 @@ export async function setUpdatePostListener() {
                 try {
                     await updatePost(updatedPost);
                     console.log('Post updated successfully');
+
+                    window.location.href = `/post/index.html?id=${id}`;
                 } catch (error) {
                     console.error('Error updating post:', error);
                 }
