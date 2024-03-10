@@ -8,6 +8,10 @@ import { getPost } from "./read.mjs";
 const action = "/posts";
 const method = "delete";
 
+/**
+ * Removes a post by sending a delete request to the social API server.
+ **/
+
 export async function removePost(id) {
     if(!id) {
         throw new Error("Delete requires a postID");

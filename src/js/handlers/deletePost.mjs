@@ -1,6 +1,10 @@
 import { removePost } from "../api/posts/index.mjs";
 import { getPost } from "../api/posts/index.mjs";
 
+/**
+ * Deleteing the post.
+  
+ */
 export async function setRemovePostListener() {
     const form = document.querySelector("#deletePost");
 
@@ -36,7 +40,6 @@ export async function setRemovePostListener() {
         }
     }
 }
-
 function fillFormWithData(form, post) {
     form.title.value = post.title;
     form.body.value = post.body;

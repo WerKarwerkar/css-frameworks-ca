@@ -3,6 +3,10 @@ import { API_SOCIAL_URL } from "../constants.mjs";
 const action = "/auth/register";
 const method = "post";
 
+/**
+ * Registers a new user by sending a registration request to the social API server.
+**/
+
 export async function register(profile) {
     const registerURL = API_SOCIAL_URL + action;
     const body = JSON.stringify(profile);

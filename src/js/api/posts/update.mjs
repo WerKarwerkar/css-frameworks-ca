@@ -6,6 +6,10 @@ import { authFetch } from "../authFetch.mjs";
 const action = "/posts";
 const method = "put";
 
+/**
+ * Updates a post by sending a request to the social API server.
+ **/
+
 export async function updatePost(postData) {
     if (!postData.id) {
         throw new Error("Update requires a postId");

@@ -1,3 +1,9 @@
+import * as postMethods from "../api/posts/index.mjs";
+
+/** 
+ * Function to create HTML template for a single post
+ **/
+
 export function postTemplateB(postData) {
     const post = document.createElement("div");
     post.classList.add("post", "border", "m-5", "p-3", "rounded");
@@ -28,11 +34,16 @@ export function postTemplateB(postData) {
     
     return post;
 }
-
+/**
+ * Function to render a single post template to a parent element.
+ */
 export function renderPostTemplate(postData, parent) {
-    parent.append(postTemplateB(postData))
+    parent.append(postTemplateB(postData));
 }
 
+/** 
+ * Function to render multiple post templates to a parent element.
+ **/
 
 export function renderPostTemplates(postDataList, parent) {
     postDataList.forEach(postData => {
@@ -41,12 +52,14 @@ export function renderPostTemplates(postDataList, parent) {
     });
 }
 
-
-import * as postMethods from "../api/posts/index.mjs";
+/** 
+ * Event listener when the DOM content is loaded
+ **/
 
 document.addEventListener("DOMContentLoaded", async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const postId = urlParams.get('id');
+    
     
     if (!postId) {
         console.error("Post id not found in URL!");
@@ -67,6 +80,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 });
 
+/**
+ *Function to render  single post details.
+ */
 function renderPostDetails(post) {
     const postContainer = document.getElementById('post');
     postContainer.innerHTML = `
@@ -77,18 +93,13 @@ function renderPostDetails(post) {
             ${post.media ? `<img src="${post.media}" alt="Image from ${post.title}" class="img-fluid mb-3 rounded">` : ''}
         </div>
         <div class="text-center">
-        <button id="updatePostBtn" class="btn btn-primary mx-2 mt-3">Update post</button>
-        <button id="removePostBtn" class="btn btn-primary mx-2 mt-3">Delete post</button>
+            <button id="updatePostBtn" class="btn btn-primary mx-2 mt-3">Update post</button>
+            <button id="removePostBtn" class="btn btn-primary mx-2 mt-3">Delete post</button>
         </div>
     `;
 
-    const updatePostBtn = document.getElementById('updatePostBtn');
-    updatePostBtn.addEventListener('click', () => {
-        window.location.href = `/post/edit/index.html?id=${post.id}`;
-    });
-
     const removePostBtn = document.getElementById('removePostBtn');
     removePostBtn.addEventListener('click', () => {
-    window.location.href = `/post/delete/index.html?id=${post.id}`;
+        window.location.href = `/post/delete/index.html?id=${post.id}`;
     });
 }

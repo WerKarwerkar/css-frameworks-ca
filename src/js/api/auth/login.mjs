@@ -4,6 +4,11 @@ import * as storage from "../../storage/index.mjs";
 const action = "/auth/login";
 const method = "post";
 
+/**
+ * Logs in the user by sending a login request to the social API server and retrieves the access token and saves it in the local storage.
+  
+ **/
+
 export async function login(profile) {
   const loginURL = API_SOCIAL_URL + action;
   const body = JSON.stringify(profile);

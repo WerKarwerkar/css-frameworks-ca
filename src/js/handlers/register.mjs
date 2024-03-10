@@ -1,5 +1,8 @@
 import { register } from "../api/auth/register.mjs";
 
+/**
+ * Registering user and redirecting to the login page.
+ */
 export function setRegisterFormListener() {
     const form = document.querySelector("#registerForm");
     
@@ -11,14 +14,11 @@ export function setRegisterFormListener() {
             const profile = Object.fromEntries(formData.entries());
 
             try {
-                // Wyślij dane rejestracji do API
                 await register(profile);
                 
-                // Przekieruj użytkownika do strony logowania po pomyślnym zarejestrowaniu
                 window.location.href = "/profile/login/index.html";
             } catch (error) {
                 console.error("Registration failed:", error);
-                // Tutaj możesz obsłużyć ewentualne błędy rejestracji, np. wyświetlić komunikat dla użytkownika
             }
         });
     }

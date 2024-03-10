@@ -1,6 +1,9 @@
 import { updatePost } from "../api/posts/index.mjs";
 import { getPost } from "../api/posts/index.mjs";
 
+/**
+ * Editing existing post data corresponding to the given ID
+ */
 export async function setUpdatePostListener() {
     const form = document.querySelector("#editPost");
 
