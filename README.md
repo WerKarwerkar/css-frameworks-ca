@@ -1,11 +1,12 @@
 # TechConnect
-#![Screenshot 2024-03-12 at 15 37 37](https://github.com/WerKarwerkar/css-frameworks-ca/assets/126430261/f688e6c4-3892-4d0f-9c94-7b6a23601001)
+![Screenshot 2024-03-12 at 15 37 37](https://github.com/WerKarwerkar/css-frameworks-ca/assets/126430261/f688e6c4-3892-4d0f-9c94-7b6a23601001)
 
 ### Overview 
-This project is the course assignment for JavaScript2 of my second-year studies in front-end development, focusing on creating social media website.
+This project is a JavaScript2 assignment that is the subject of my second-year studies in front-end development, focusing on creating social networking sites.
 
-### Describtion 
-This website is designed with bootstrap and meant to connect people from Tech industrie.
+
+### Description
+This website is bootstrap designed and aims to connect people in the tech industry.
 
 ### Key Features
 
